@@ -1,8 +1,9 @@
 {
-  "name": "smart-tourism-safety",
+  "name": "smart-tourism-safety-police-dashboard",
+  "version": "2.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "description": "Smart Tourism Safety - Enhanced Police Dashboard for SIH Hackathon",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

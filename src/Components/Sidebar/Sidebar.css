@@ -1,0 +1,51 @@
+.sidebar {
+  width: 15%;
+  transition: all 0.3s ease;
+  height: 90vh;
+  font-size: 2rem;
+  color: white;
+  background-color: darkblue;
+}
+.sidebar ul li {
+  padding: 2rem;
+  border-bottom: 1px solid gray;
+}
+.sidebar ul li .listItem {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  position: relative;
+}
+.sidebar ul li .listItem .alertNumber {
+  position: absolute;
+  top: -8px;
+  left: 16px;
+  font-size: 1rem;
+  background-color: red;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+.sidebar ul li .listItem .incidentNumber {
+  position: absolute;
+  top: -8px;
+  left: 16px;
+  font-size: 1rem;
+  background-color: red;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+.sidebar ul li .listItem .itemLogo {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+}
+.sidebar ul li .listItem .itemLogo svg {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+}
+.sidebar ul li .listItem .itemName {
+  font-size: 2rem;
+  cursor: pointer;
+}/*# sourceMappingURL=Sidebar.css.map */

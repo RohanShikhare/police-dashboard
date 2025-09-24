@@ -1,0 +1,59 @@
+.sidebar {
+  width: 15%;
+  transition: all 0.3s ease;
+  height: 90vh;
+  font-size: 2rem;
+  color: white;
+  background-color: darkblue;
+
+  ul {
+    li {
+      padding: 2rem;
+      border-bottom: 1px solid gray;
+
+      .listItem {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+        position: relative;
+
+        .alertNumber {
+          position: absolute;
+          top: -8px;
+          left: 16px;
+          font-size: 1rem;
+          background-color: red;
+          border-radius: 2rem;
+          padding: 0.5rem;
+        }
+
+        .incidentNumber {
+          position: absolute;
+          top: -8px;
+          left: 16px;
+          font-size: 1rem;
+          background-color: red;
+          border-radius: 2rem;
+          padding: 0.5rem;
+        }
+
+        .itemLogo {
+          height: 3rem;
+          width: 3rem;
+          cursor: pointer;
+
+          svg {
+            height: 3rem;
+            width: 3rem;
+            cursor: pointer;
+          }
+        }
+        .itemName {
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
