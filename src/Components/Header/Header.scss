@@ -1,0 +1,99 @@
+.header {
+  height: 100%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: White;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .headerLogo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    img {
+      height: 5rem;
+      width: 5rem;
+    }
+    p {
+      font-size: 2rem;
+      color: white;
+      word-break: break-all;
+    }
+  }
+  .headerOptions {
+    padding-right: 6rem;
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      li {
+        font-size: 2rem;
+        cursor: pointer;
+
+        .searchDiv {
+          position: relative;
+          .searchIcon {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+
+            svg {
+              fill: black;
+            }
+          }
+          .searchInput {
+            height: 4rem;
+            border-radius: 1rem;
+            font-size: 2rem;
+            padding-left: 4rem;
+          }
+        }
+        .userDiv {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          align-items: center;
+          padding: 0 1rem;
+          .userIcon {
+            img {
+              border-radius: 50%;
+              border: 1px solid white;
+              height: 5rem;
+              width: 5rem;
+            }
+          }
+          .userDetails {
+            position: relative;
+
+            .userName {
+              position: relative;
+              font-size: 2rem;
+            }
+            .userAction {
+              position: absolute;
+              right: -3rem;
+              top: 5rem;
+              display: flex;
+              flex-direction: column;
+              background-color: white;
+              padding: 1rem;
+              color: black;
+              width: 10rem;
+              border: 1px solid black;
+              display: none;
+
+              li {
+                border-bottom: 1px solid black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

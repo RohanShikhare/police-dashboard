@@ -1,12 +1,18 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
+import TourRakshakLogo from "../../Assets/images/TourRakshakLogo.png"
+import "./Header.css";
 
 function Header() {
   return (
     <header>
       <div className="header">
         <div className="headerLogo">
-          <img src="" alt="TourRakshak" />
+          <img src={TourRakshakLogo} alt="TourRakshak" />
+          <div className="headerText">
+            <p>Police</p>
+            <p>Department</p>
+          </div>
         </div>
         <div className="headerOptions">
           <ul>
@@ -23,7 +29,9 @@ function Header() {
             </li>
             <li>
               <div className="userDiv">
-                <div className="userIcon"></div>
+                <div className="userIcon">
+                  <img src="" alt="" />
+                </div>
                 <div className="userDetails">
                   <p className="userName">Cops</p>
                   <ul className="userAction">

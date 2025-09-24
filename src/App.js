@@ -1,9 +1,15 @@
-import Header from "./Components/Header";
-import "./Assets/css/Main.css";
+import Header from "./Components/Header/Header";
+import "../src/Assets/css/Main.css";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
   return (
-    <Header/>
+    <>
+      <Header />
+      <div className="mainArea">
+        <Sidebar/>
+      </div>
+    </>
   );
 }
 
