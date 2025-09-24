@@ -1,0 +1,195 @@
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  transition: all 0.3s ease;
+  height: 92vh;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+.sidebar.police-sidebar {
+  background: linear-gradient(180deg, #0984e3 0%, #6c5ce7 100%);
+}
+
+.sidebar.tourism-sidebar {
+  background: linear-gradient(180deg, #00b894 0%, #00cec9 100%);
+}
+
+.sidebar ul {
+  padding: 1rem 0;
+}
+
+.sidebar ul li {
+  margin: 0.5rem 0;
+}
+
+.sidebar ul li .listItem {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0 25px 25px 0;
+  margin-right: 1rem;
+}
+
+.sidebar ul li .listItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.sidebar ul li .listItem.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-left: 4px solid white;
+  transform: translateX(0);
+}
+
+.sidebar ul li .listItem.active::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #f8f9fa;
+}
+
+.sidebar ul li .listItem .notificationBadge {
+  position: absolute;
+  top: 8px;
+  left: 35px;
+  font-size: 0.7rem;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+  }
+}
+
+.sidebar ul li .listItem .itemLogo {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sidebar ul li .listItem .itemLogo svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li .listItem:hover .itemLogo svg {
+  transform: scale(1.1);
+}
+
+.sidebar ul li .listItem .itemName {
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li .listItem:hover .itemName {
+  font-weight: 600;
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 240px;
+    min-width: 240px;
+  }
+  
+  .sidebar ul li .listItem {
+    padding: 0.8rem 1rem;
+    gap: 0.8rem;
+  }
+  
+  .sidebar ul li .listItem .itemName {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    min-width: 60px;
+  }
+  
+  .sidebar ul li .listItem {
+    padding: 1rem 0.5rem;
+    justify-content: center;
+  }
+  
+  .sidebar ul li .listItem .itemName {
+    display: none;
+  }
+  
+  .sidebar ul li .listItem .notificationBadge {
+    left: 25px;
+    top: 5px;
+  }
+  
+  .sidebar ul li .listItem.active::before {
+    display: none;
+  }
+}
+
+/* Department specific enhancements */
+.police-sidebar .listItem.active {
+  border-left-color: #74b9ff;
+}
+
+.tourism-sidebar .listItem.active {
+  border-left-color: #55efc4;
+}
